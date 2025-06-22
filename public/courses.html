@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Madhusudan Somvanshi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        html, body { height: 100%; }
+        body { min-height: 100vh; display: flex; flex-direction: column; font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #374151; }
+        main { flex: 1 0 auto; }
+        h1, h2, h3, .section-title, .project-title, .skill-item .text-lg.font-semibold, .text-gradient, .nav-link, .tech-tag {
+            font-family: 'Poppins', 'Inter', sans-serif !important; font-weight: 700 !important; letter-spacing: 0.01em;
+        }
+        .section-title, .project-title { font-weight: 800 !important; }
+        .tech-tag {
+            font-size: 0.95rem; font-family: 'Poppins', 'Inter', sans-serif !important; font-weight: 600; color: #6366f1;
+            background: #eef2ff; border-radius: 0.5rem; padding: 0.2em 0.7em; margin-right: 0.3em; margin-bottom: 0.2em; display: inline-block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700 min-h-screen flex flex-col">
+<main class="flex-1">
+    <!-- Courses Section Content -->
+    <section class="spa-section py-20 bg-gradient-to-br from-green-100 to-teal-100 min-h-[80vh] flex items-center justify-center">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animate-on-scroll text-4xl md:text-5xl font-extrabold text-gradient bg-gradient-to-r from-green-600 via-teal-500 to-blue-500 bg-clip-text text-transparent drop-shadow-lg mb-8 tracking-tight uppercase">Courses</h2>
+            <div class="flex space-x-8 pb-4" style="max-width: 100vw;">
+                <div class="bg-white p-6 rounded-xl shadow-lg min-w-[320px] flex flex-col items-center">
+                    <div class="w-full overflow-x-auto custom-scrollbar mb-4" style="max-width: 320px;">
+                        <img src="Files/Logo/iirs.jpeg" alt="IIRS Certificate" class="w-80 h-48 object-contain rounded border border-green-200 shadow mx-auto cursor-pointer" onclick="window.open('Files/PDF/iirs_certificate.pdf', '_blank')">
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 text-center mb-1">Geodata Processing using Python and Machine Learning</h3>
+                    <p class="text-green-600 text-sm font-medium mb-1">IIRS (Indian Institute of Remote Sensing)</p>
+                    <p class="text-gray-500 text-xs mb-2">Feb 2025</p>
+                    <div class="w-full mb-2">
+                        <button onclick="window.open('Files/PDF/iirs_certificate.pdf', '_blank')" class="w-full px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-200 active:scale-95 hover:scale-105">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <a href="index.html" class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-200 active:scale-95 hover:scale-105">Back to Home</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-gray-900 text-gray-400 py-10 text-center w-full mt-auto">
+    <div class="container mx-auto px-6">
+        <p>&copy; <span id="currentYear"></span> Madhusudan Somvanshi. All rights reserved.</p>
+        <!-- <p class="text-sm mt-2">Designed with <i class="fas fa-heart text-red-500"></i> using Tailwind CSS &amp; Gemini.</p> -->
+    </div>
+</footer>
+<script>
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

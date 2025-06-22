@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Madhusudan Somvanshi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Font system for headings and explanations */
+        h1, h2, h3, h4, h5, h6, .section-title, nav .nav-link, .project-title, .skill-item span, .project-tech-stack .tech-tag, .tech-tag {
+            font-family: 'Poppins', 'Inter', Arial, sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.01em;
+            color: inherit;
+        }
+        
+        body, p, .project-description, .list-disc, .list-inside, .text-gray-600, .text-gray-700, .text-gray-500, .text-base, .text-lg, .text-sm, .text-xs, .form-input, .floating-label, .input-icon, .project-item ul, .skill-item .block, .card, .about-me-text, .project-description, .project-item li, .project-item ul, .project-item p, .project-item span, .project-item div, .project-item .text-gray-600, .project-item .text-gray-500, .project-item .text-base, .project-item .text-lg, .project-item .text-sm, .project-item .text-xs {
+            font-family: 'Inter', Arial, sans-serif !important;
+            font-weight: 400;
+            color: inherit;
+        }
+        
+        /* Ensure font weights for hierarchy */
+        h1, .section-title { font-weight: 800 !important; }
+        h2, h3 { font-weight: 700 !important; }
+        h4, h5, h6 { font-weight: 600 !important; }
+        
+        /* Nav links and headings vibrant color */
+        nav .nav-link, .section-title {
+            font-family: 'Poppins', 'Inter', Arial, sans-serif !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        
+        /* Explanation/body text color and spacing */
+        p, .project-description, .about-me-text, .list-disc, .list-inside, .text-gray-600, .text-gray-700, .text-gray-500 {
+            color: #444;
+            line-height: 1.7;
+            font-size: 1.08rem;
+            font-family: 'Inter', Arial, sans-serif !important;
+        }
+        
+        /* Responsive font sizes for headings */
+        h1, .section-title { font-size: 2.5rem; }
+        @media (min-width: 768px) {
+            h1, .section-title { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+            h3 { font-size: 2rem; }
+        }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        
+        /* Buttons and tags use Poppins for vibrancy */
+        .btn, .tech-tag, .project-tech-stack .tech-tag {
+            font-family: 'Poppins', 'Inter', Arial, sans-serif !important;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .section-title, .project-title, .skill-item .text-lg.font-semibold, .text-gradient, .nav-link, .tech-tag {
+            font-family: 'Poppins', 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.01em;
+        }
+        .section-title, .project-title {
+            font-weight: 800 !important;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        p, li, .text-gray-600, .text-lg, .text-base, .text-sm, .text-xs, .project-description, .list-disc, .leading-relaxed, .text-gray-500, .text-gray-700 {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 400;
+            color: #374151;
+        }
+        .text-lg, .text-base {
+            font-size: 1.125rem;
+        }
+        .text-sm {
+            font-size: 0.95rem;
+        }
+        .text-xs {
+            font-size: 0.85rem;
+        }
+        .tech-tag {
+            font-size: 0.95rem;
+            font-family: 'Poppins', 'Inter', sans-serif !important;
+            font-weight: 600;
+            color: #6366f1;
+            background: #eef2ff;
+            border-radius: 0.5rem;
+            padding: 0.2em 0.7em;
+            margin-right: 0.3em;
+            margin-bottom: 0.2em;
+            display: inline-block;
+        }
+        .nav-link {
+            font-family: 'Poppins', 'Inter', sans-serif !important;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #6366f1;
+            transition: color 0.2s;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #a21caf;
+        }
+        /* Section spacing for clarity */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        /* Ensure About, Skills, Projects, Experience, Education, Courses, Contact headings use Poppins */
+        #about .section-title,
+        #skills .section-title,
+        #projects .section-title,
+        #experience .section-title,
+        #education .section-title,
+        #courses .section-title,
+        #contact .section-title {
+            font-family: 'Poppins', 'Inter', sans-serif !important;
+            font-weight: 800 !important;
+            letter-spacing: 0.02em;
+        }
+        /* Explanation/body text in all sections */
+        #about p, #about li,
+        #skills p, #skills li,
+        #projects p, #projects li,
+        #experience p, #experience li,
+        #education p, #education li,
+        #courses p, #courses li,
+        #contact p, #contact li {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 400;
+            color: #374151;
+        }
+        /* For extra vibrancy, highlight key words in About section */
+        #about #about-me-text strong {
+            color: #7c3aed;
+            font-family: 'Poppins', 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        /* Spinner and keyframes for loading indicators */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #6366f1; /* indigo-500 */
+            animation: spin 1s ease infinite;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* --- Modern Sidebar Redesign --- */
+#sidebar {
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 18rem;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-radius: 0;
+    margin: 0;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    transition: box-shadow 0.3s;
+}
+#sidebar .sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 2rem 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#sidebar .sidebar-profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff2;
+}
+#sidebar .sidebar-profile-info {
+    color: #fff;
+}
+#sidebar .sidebar-profile-info .sidebar-profile-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+}
+#sidebar .sidebar-profile-info .sidebar-profile-role {
+    font-size: 0.95rem;
+    color: #fbbf24;
+    font-weight: 500;
+}
+#sidebar .sidebar-section {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    color: #fff8;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+#sidebar nav {
+    flex: 1;
+    padding: 0 0 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#sidebar nav .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 2rem;
+    color: #fff;
+    border-radius: 1.2rem;
+    font-size: 1.08rem;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+    cursor: pointer;
+    text-decoration: none;
+}
+#sidebar nav .sidebar-link.active, #sidebar nav .sidebar-link:hover {
+    background: rgba(251,191,36,0.13);
+    color: #fbbf24;
+}
+#sidebar .sidebar-action {
+    margin: 2rem 2rem 1.5rem 2rem;
+    padding: 1rem 0;
+    border-radius: 1.2rem;
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e42 100%);
+    color: #232526;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px 0 rgba(251,191,36,0.10);
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    border: none;
+}
+#sidebar .sidebar-action:hover {
+    background: linear-gradient(90deg, #f59e42 0%, #fbbf24 100%);
+    color: #fff;
+}
+#closeSidebar {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: color 0.18s;
+}
+#closeSidebar:hover {
+    color: #fbbf24;
+}
+/* Modern Hamburger Button */
+#openSidebar {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 100 !important;
+    width: 40px;
+    height: 40px;
+    background: rgba(35,37,38,0.85) !important;
+    border: none !important;
+    box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.13) !important;
+    color: #fbbf24 !important;
+    border-radius: 50% !important;
+    transition: box-shadow 0.2s, background 0.2s;
+    padding: 0;
+    font-size: 1.5rem !important;
+    animation: bounce 1.2s infinite alternate;
+}
+#openSidebar:hover, #openSidebar:focus {
+    box-shadow: 0 4px 16px 0 rgba(251,191,36,0.18) !important;
+    background: rgba(65,67,69,0.95) !important;
+    color: #fffbe7 !important;
+}
+#openSidebar i {
+    font-size: 1.2em;
+    color: #fbbf24;
+}
+
+/* Modern Gemini-style greeting bar */
+#greeting-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #232526 0%, #6366f1 100%);
+    color: #fff;
+    padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+    font-size: 1.25rem;
+    font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    font-weight: 600;
+    border-bottom: 1.5px solid #3b3b4f;
+    box-shadow: 0 2px 12px 0 rgba(99,102,241,0.08);
+    border-radius: 0 0 1.2rem 0;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+#greeting-bar .greeting-emoji {
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+}
+#greeting-bar .greeting-user {
+    font-weight: 700;
+    color: #fbbf24;
+    margin-left: 0.2rem;
+}
+#greeting-bar .greeting-time {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e0e7ff;
+    letter-spacing: 0.01em;
+}
+@media (max-width: 600px) {
+  #greeting-bar {
+    padding: 1rem 1rem 1rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 0;
+  }
+}
+
+/* Responsive: sidebar full width on mobile */
+@media (max-width: 600px) {
+  #sidebar {
+    width: 100vw;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+}
+
+/* Remove margin-left from main content container and .main-content-offset */
+.flex-1.flex.flex-col.min-h-screen.transition-all.duration-300 {
+    margin-left: 18rem !important;
+}
+@media (max-width: 600px) {
+  .flex-1.flex.flex-col.min-h-screen.transition-all.duration-300 {
+    margin-left: 0 !important;
+  }
+}
+.main-content-offset {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+@media (min-width: 601px) {
+  .main-content-offset {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  .main-content-offset {
+    margin-left: 0 !important;
+  }
+}
+/* Remove padding-left from greeting bar and main for perfect alignment */
+#greeting-bar, main {
+    padding-left: 0 !important;
+}
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700">
+    <!-- Sidebar (always visible, no overlay) -->
+    <aside id="sidebar" class="fixed top-0 left-0 flex-col shadow-lg">
+        <div class="sidebar-profile">
+            <img src="Images/Madhusudan_P.jpg" alt="Profile" class="sidebar-profile-img object-cover object-center">
+            <div class="sidebar-profile-info">
+                <div class="sidebar-profile-name">Madhusudan Somvanshi</div>
+                <div class="sidebar-profile-role">Data Scientist</div>
+            </div>
+        </div>
+        <div class="sidebar-section">MAIN</div>
+        <nav>
+            <a href="index.html" class="sidebar-link active"><i class="fas fa-home"></i>Home</a>
+            <a href="about.html" class="sidebar-link"><i class="fas fa-user"></i>About</a>
+            <a href="skills.html" class="sidebar-link"><i class="fas fa-cogs"></i>Skills</a>
+            <a href="projects.html" class="sidebar-link"><i class="fas fa-project-diagram"></i>Projects</a>
+            <a href="experience.html" class="sidebar-link"><i class="fas fa-briefcase"></i>Experience</a>
+            <a href="education.html" class="sidebar-link"><i class="fas fa-graduation-cap"></i>Education</a>
+            <a href="courses.html" class="sidebar-link"><i class="fas fa-book"></i>Courses</a>
+            <a href="contact.html" class="sidebar-link"><i class="fas fa-envelope"></i>Contact</a>
+        </nav>
+    </aside>
+    <!-- Main Content Container -->
+    <div class="flex-1 flex flex-col min-h-screen transition-all duration-300" style="margin-left: 19rem;">
+        <div id="greeting-bar" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 text-center text-lg font-semibold shadow-md flex flex-row items-center justify-between">
+            <span id="greeting-text" class="flex items-center text-xl md:text-2xl font-bold">Good Afternoon!</span>
+            <span id="datetime-text" class="flex items-center gap-3">Loading...</span>
+        </div>
+
+        <!-- Main Content Container (no longer SPA) -->
+        <main class="ml-0 transition-all duration-300 main-content-offset">
+            <section id="home" class="spa-section min-h-screen flex items-center justify-center bg-[#181c2f] text-white pt-32 md:pt-0 relative overflow-hidden">
+                <!-- Modern animated SVG background for extra interest -->
+                <div class="absolute inset-0 z-0 pointer-events-none select-none">
+                    <svg width="100%" height="100%" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <defs>
+                            <radialGradient id="home-bg-radial" cx="50%" cy="40%" r="80%">
+                                <stop offset="0%" stop-color="#43e97b"/>
+                                <stop offset="100%" stop-color="#38f9d7"/>
+                            </radialGradient>
+                            <linearGradient id="home-bg-linear" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#181c2f"/>
+                                <stop offset="100%" stop-color="#23243a"/>
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="900" cy="200" rx="400" ry="120" fill="url(#home-bg-radial)" opacity="0.18"></ellipse>
+                        <ellipse cx="400" cy="600" rx="300" ry="100" fill="#fbbf24" opacity="0.10"></ellipse>
+                        <ellipse cx="1200" cy="700" rx="200" ry="80" fill="#6366f1" opacity="0.13"></ellipse>
+                        <ellipse cx="200" cy="200" rx="180" ry="60" fill="#f472b6" opacity="0.12"></ellipse>
+                    </svg>
+                </div>
+                <div class="container mx-auto px-6 text-center relative z-10">
+                    <img src="Images/Madhusudan_P.jpg" alt="Madhusudan Somvanshi" id="hero-img" class="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-white/50 object-cover animate-on-load">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-on-load delay-1" id="hero-name">
+                        Hi, I'm Madhusudan Somvanshi
+                        <br>
+                        <span class="block mt-2 text-2xl md:text-3xl font-semibold text-gradient bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                            <span id="typewriter-role"></span>
+                        </span>
+                    </h1>
+                    <script>
+                    // Typewriter effect for roles
+                    const roles = [
+                        'Data Analyst',
+                        'Cloud Application Developer',
+                        'Machine Learning Enthusiast',
+                        'Technology Explorer',
+                        'Problem Solver'
+                    ];
+                    let roleIndex = 0, charIndex = 0, isDeleting = false;
+                    const typewriter = document.getElementById('typewriter-role');
+                    function typeRole() {
+                        const current = roles[roleIndex];
+                        if (isDeleting) {
+                            typewriter.textContent = current.substring(0, charIndex--);
+                            if (charIndex < 0) {
+                                isDeleting = false;
+                                roleIndex = (roleIndex + 1) % roles.length;
+                                setTimeout(typeRole, 500);
+                            } else {
+                                setTimeout(typeRole, 40);
+                            }
+                        } else {
+                            typewriter.textContent = current.substring(0, charIndex++);
+                            if (charIndex > current.length) {
+                                isDeleting = true;
+                                setTimeout(typeRole, 1200);
+                            } else {
+                                setTimeout(typeRole, 80);
+                            }
+                        }
+                    }
+                    if(typewriter) typeRole();
+                    </script>
+                    <p class="text-xl md:text-2xl mb-8 font-light animate-on-load delay-2" id="hero-title">Aspiring Data Analyst | Machine Learning Enthusiast</p>
+                    <div class="space-x-4 animate-on-load delay-3">
+                        <a href="projects.html" class="text-lg px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-200 active:scale-95 hover:scale-105"></i> My Work</a>
+                        <a href="contact.html" class="text-lg px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-200 active:scale-95 hover:scale-105">Get In Touch</a>
+                    </div>
+                    <div class="mt-12 text-2xl animate-on-load delay-3">
+                        <a href="https://www.linkedin.com/in/madhusudan-somvanshi-13a72b319/" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white mx-3 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Madhu1234sudan/" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white mx-3 transition-colors"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            // --- Standard Portfolio Interactivity ---
+            try {
+                // Only run nav logic if elements exist
+                const navLinks = document.querySelectorAll('nav .sidebar-link');
+                const sections = document.querySelectorAll('section[id]');
+                function changeNavOnScroll() {
+                    let scrollY = window.pageYOffset;
+                    let currentSectionId = sections[0]?.getAttribute('id') || 'home';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - 80;
+                        if (scrollY >= sectionTop) {
+                            currentSectionId = section.getAttribute('id');
+                        }
+                    });
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentSectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+                if (navLinks.length && sections.length) {
+                    window.addEventListener('scroll', changeNavOnScroll);
+                    window.addEventListener('load', changeNavOnScroll);
+                }
+            } catch (e) { /* fail silently */ }
+
+            // Scroll to top button logic (only if present)
+            try {
+                const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+                if (scrollToTopBtn) {
+                    window.onscroll = function() {
+                        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                            scrollToTopBtn.classList.remove('hidden');
+                        } else {
+                            scrollToTopBtn.classList.add('hidden');
+                        }
+                    };
+                    scrollToTopBtn.addEventListener('click', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                }
+            } catch (e) {}
+
+            // Contact form logic (only if present)
+            try {
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const formMessageContainer = document.getElementById('form-message-container');
+                        formMessageContainer.innerHTML = '';
+                        const messageDiv = document.createElement('div');
+                        messageDiv.textContent = 'Thank you for your message! I will get back to you soon.';
+                        messageDiv.className = 'mt-4 p-3 text-center bg-green-100 text-green-700 rounded-lg text-sm';
+                        formMessageContainer.appendChild(messageDiv);
+                        this.reset();
+                        setTimeout(() => {
+                            messageDiv.remove();
+                        }, 5000);
+                    });
+                }
+            } catch (e) {}
+
+            // --- Scroll Animations ---
+            try {
+                const scrollAnimatedElements = document.querySelectorAll('.animate-on-scroll');
+                if (scrollAnimatedElements.length) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1
+                    });
+                    scrollAnimatedElements.forEach(el => {
+                        observer.observe(el);
+                    });
+                }
+            } catch (e) {}
+
+            // --- AI Skill Matcher Functionality ---
+            try {
+                const openAiMatcherBtn = document.getElementById('openAiMatcherBtn');
+                const aiMatcherModal = document.getElementById('aiMatcherModal');
+                const closeAiMatcherModalBtn = document.getElementById('closeAiMatcherModalBtn');
+                const submitAiMatcherQueryBtn = document.getElementById('submitAiMatcherQueryBtn');
+                const recruiterQueryTextarea = document.getElementById('recruiterQuery');
+                const aiMatcherResponseContainer = document.getElementById('aiMatcherResponseContainer');
+                if (aiMatcherModal) aiMatcherModal.classList.add('modal-hidden');
+                if (openAiMatcherBtn) {
+                    openAiMatcherBtn.addEventListener('click', () => {
+                        aiMatcherModal.classList.remove('modal-hidden');
+                    });
+                }
+                if (closeAiMatcherModalBtn) {
+                    closeAiMatcherModalBtn.addEventListener('click', () => {
+                        aiMatcherModal.classList.add('modal-hidden');
+                        aiMatcherResponseContainer.innerHTML = '';
+                        recruiterQueryTextarea.value = '';
+                    });
+                }
+                if (aiMatcherModal) {
+                    aiMatcherModal.addEventListener('click', (event) => {
+                        if (event.target === aiMatcherModal) {
+                            aiMatcherModal.classList.add('modal-hidden');
+                            aiMatcherResponseContainer.innerHTML = '';
+                            recruiterQueryTextarea.value = '';
+                        }
+                    });
+                }
+                if (submitAiMatcherQueryBtn) {
+                    submitAiMatcherQueryBtn.onclick = async function() {
+                        const query = recruiterQueryTextarea.value.trim();
+                        if (!query) {
+                            aiMatcherResponseContainer.innerHTML = '<p class="text-red-600 text-sm">Please enter a role or skills you are looking for.</p>';
+                            return;
+                        }
+                        aiMatcherResponseContainer.innerHTML = '<div class="spinner"></div>';
+                        const profile = `\nName: Madhusudan Somvanshi\nTitle: Aspiring Data Analyst | Machine Learning Enthusiast\nSkills: Python, Data Analysis, Machine Learning, Cloud Computing, MySQL, Java, MongoDB, Power BI, Tableau, Excel, Data Modeling, Threat Detection, Azure, Google App Engine, etc.\nProjects: Email Spam Detection Using Naïve Bayes, Deep Active Learning for Short Text Classification\nExperience: Deloitte Data Analyst Simulation, Microsoft Internship (Cloud Computing & Azure)\nCertifications: IIRS Geodata Processing, etc.\nLocation: Basavakalyan, India\n        `.trim();
+                        try {
+                            const response = await fetch('http://localhost:3001/api/ai-analyze', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ query, profile })
+                            });
+                            const data = await response.json();
+                            if (data.analysis) {
+                                aiMatcherResponseContainer.innerHTML = `<div class='p-4 bg-indigo-50 rounded-lg border border-indigo-200 text-gray-700 leading-relaxed'>\n                        <strong>AI Analysis:</strong><br>${data.analysis}\n                    </div>`;
+                            } else {
+                                aiMatcherResponseContainer.innerHTML = `<div class='p-4 bg-red-50 rounded-lg border border-red-200 text-red-700 leading-relaxed'>\n                        <strong>Error:</strong> ${data.error || 'Unknown error.'}\n                    </div>`;
+                            }
+                        } catch (err) {
+                            aiMatcherResponseContainer.innerHTML = `<div class='p-4 bg-red-50 rounded-lg border border-red-200 text-red-700 leading-relaxed'>\n                    <strong>Network Error:</strong> Could not connect to AI backend.\n                </div>`;
+                        }
+                    };
+                }
+            } catch (e) {}
+
+            function showCertificate(certId) {
+    document.querySelectorAll('[id$="-cert"]').forEach(el => el.classList.add('hidden'));
+    const certDiv = document.getElementById(certId);
+    if (certDiv) certDiv.classList.remove('hidden');
+    certDiv?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}// --- Real-time Greeting and Date/Time ---
+</script>
+<!-- Move greeting bar script to end of body -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function updateGreetingAndTime() {
+        var greetingText = document.getElementById('greeting-text');
+        var datetimeText = document.getElementById('datetime-text');
+        if (!greetingText || !datetimeText) return;
+
+        var now = new Date();
+        var hours = now.getHours();
+        var greeting = 'Hello';
+        if (hours >= 5 && hours < 12) greeting = 'Good Morning';
+        else if (hours >= 12 && hours < 17) greeting = 'Good Afternoon';
+        else if (hours >= 17 && hours < 22) greeting = 'Good Evening';
+        else greeting = 'Good Night';
+
+        var optionsDate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var dateString = now.toLocaleDateString(undefined, optionsDate);
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        hour = hour < 10 ? '0' + hour : hour;
+        minute = minute < 10 ? '0' + minute : minute;
+        var timeString = hour + ':' + minute;
+        greetingText.textContent = greeting + '!';
+        datetimeText.textContent = dateString + ' | ' + timeString;
+    }
+    updateGreetingAndTime();
+    setInterval(updateGreetingAndTime, 1000);
+});
+</script>
+    <style>
+    @keyframes fade-in {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in { animation: fade-in 0.4s cubic-bezier(0.4,0,0.2,1); }
+#aiMatcherModal .modal-content {
+  box-shadow: 0 8px 40px 0 rgba(236,72,153,0.10), 0 1.5px 8px 0 rgba(99,102,241,0.08);
+  border: 1.5px solid #f9a8d4;
+  background: linear-gradient(120deg, rgba(255,255,255,0.92) 60%, rgba(253,242,248,0.95) 100%);
+  backdrop-filter: blur(16px);
+}
+#aiMatcherModal .form-input:focus {
+  border-color: #ec4899;
+  box-shadow: 0 2px 16px 0 rgba(236,72,153,0.10);
+}
+#aiMatcherModal .form-input {
+  background: linear-gradient(90deg, #fce7f3 0%, #fdf2f8 100%);
+  border: 2px solid #f9a8d4;
+  font-size: 1.1rem;
+  padding: 1.1rem 1.2rem;
+  transition: border 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 1px 8px 0 rgba(236,72,153,0.06);
+  caret-color: #ec4899;
+}
+#aiMatcherModal .modal-content::-webkit-scrollbar {
+  width: 8px;
+  background: #fdf2f8;
+}
+#aiMatcherModal .modal-content::-webkit-scrollbar-thumb {
+  background: #f9a8d4;
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  .main-content-offset {
+    margin-top: 4.5rem;
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .main-content-offset {
+    margin-top: 2.5rem;
+    margin-left: 0.5rem;
+  }
+}
+</style>
+<script>
+// Remove sidebar toggle logic
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Madhusudan Somvanshi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        html, body { height: 100%; }
+        body { min-height: 100vh; display: flex; flex-direction: column; font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #374151; }
+        main { flex: 1 0 auto; }
+        h1, h2, h3, .section-title, .project-title, .skill-item .text-lg.font-semibold, .text-gradient, .nav-link, .tech-tag {
+            font-family: 'Poppins', 'Inter', sans-serif !important; font-weight: 700 !important; letter-spacing: 0.01em;
+        }
+        .section-title, .project-title { font-weight: 800 !important; }
+        .tech-tag {
+            font-size: 0.95rem; font-family: 'Poppins', 'Inter', sans-serif !important; font-weight: 600; color: #6366f1;
+            background: #eef2ff; border-radius: 0.5rem; padding: 0.2em 0.7em; margin-right: 0.3em; margin-bottom: 0.2em; display: inline-block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700 min-h-screen flex flex-col">
+<main class="flex-1">
+    <!-- Skills Section Content -->
+    <section class="spa-section py-20 bg-gradient-to-br from-slate-100 to-gray-200 min-h-[80vh] flex items-center justify-center">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title animate-on-scroll text-4xl md:text-5xl font-extrabold text-gradient bg-gradient-to-r from-green-600 via-teal-500 to-blue-500 bg-clip-text text-transparent drop-shadow-lg mb-8 tracking-tight uppercase">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 animate-on-scroll stagger" id="skills-list">
+                <!-- Programming Languages -->
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-python text-5xl text-yellow-500 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Python</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full" style="width: 95%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Expert</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-java text-5xl text-red-600 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Java</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-red-400 to-red-600 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-database text-5xl text-blue-500 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">MySQL</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" style="width: 85%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-database text-5xl text-green-600 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">MongoDB</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-green-400 to-green-600 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Data & Analytics -->
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-chart-line text-5xl text-indigo-500 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Data Analysis</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-robot text-5xl text-purple-500 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Machine Learning</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full" style="width: 80%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-cloud text-5xl text-blue-400 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Cloud Computing</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-blue-300 to-blue-500 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-chart-pie text-5xl text-yellow-400 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Power BI</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-table text-5xl text-blue-700 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Tableau</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-blue-400 to-blue-700 rounded-full" style="width: 65%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fas fa-file-excel text-5xl text-green-700 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">MS Excel</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-green-400 to-green-700 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Advanced</span>
+                    </div>
+                </div>
+                <!-- Cloud Platforms -->
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-azure text-5xl text-blue-600 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Azure</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" style="width: 60%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Beginner</span>
+                    </div>
+                </div>
+                <div class="skill-item flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-google text-5xl text-red-400 mb-3"></i>
+                    <span class="text-lg font-semibold text-gray-700">Google App Engine</span>
+                    <div class="w-full mt-3">
+                        <div class="h-3 bg-gray-200 rounded-full">
+                            <div class="h-3 bg-gradient-to-r from-red-300 to-red-500 rounded-full" style="width: 60%"></div>
+                        </div>
+                        <span class="block text-xs text-gray-500 mt-1">Beginner</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <a href="index.html" class="px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg transition-all duration-200 active:scale-95 hover:scale-105">Back to Home</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-gray-900 text-gray-400 py-10 text-center w-full mt-auto">
+    <div class="container mx-auto px-6">
+        <p>&copy; <span id="currentYear"></span> Madhusudan Somvanshi. All rights reserved.</p>
+        <!-- <p class="text-sm mt-2">Designed with <i class="fas fa-heart text-red-500"></i> using Tailwind CSS &amp; Gemini.</p> -->
+    </div>
+</footer>
+<script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>
